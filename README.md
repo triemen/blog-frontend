@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Open the .env.template file and set your domain, client id and client secret from your auth0 dashboard. Rename the file to .env.
+
 In the project directory, you can run:
 
 ### `yarn start`
