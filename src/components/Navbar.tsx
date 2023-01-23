@@ -5,12 +5,15 @@ import { useAuth0 } from "@auth0/auth0-react";
 function Navbar() {
   const { isLoading, user, loginWithRedirect, logout, isAuthenticated } =
     useAuth0();
+  console.log("user", user);
 
   return (
     <header>
       <div className="container-fluid position-relative no-side-padding">
         <span className="logo">
-          {user && user.picture && <img src={user.picture} alt="My Avatar" />}
+          {user && !isLoading && user.picture && (
+            <img src={user.picture} alt="My Avatar" />
+          )}
           {!user && (
             <img
               src={
